@@ -19,11 +19,18 @@ include __DIR__ . '/database/data.php';
     <!-- MAIN -->
     <main>
         <div class="container">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+
+            <?php foreach ( $database as $key => $data ) {  ?>
+                <div class="card">
+                    <div class="boxSongImg">
+                        <img src="<?php echo $data['poster'] ?>" alt="">
+                    </div>
+                    <h3><?php echo $data['title'] ?></h3>
+                    <h5><?php echo $data['author'] ?></h5>
+                    <h5><?php echo $data['year'] ?></h5>
+                </div>
+            <?php } ?>
+
         </div>
     </main>
     
