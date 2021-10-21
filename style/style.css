@@ -8,4 +8,30 @@
 /* ---------------------- COMMON ----------------------*/
 body {
     font-family: 'Roboto';
+    height: 100%;
+}
+header {
+    height: 60px;
+    width: 100%;
+    background-color: rgb(43, 49, 47);
+}
+main {
+    height: calc(100% - 60px);
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 100px 0; */
+}
+.container {
+    max-width: 1024px;
+    background-color: rgb(125, 138, 133);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: rgb(65, 87, 79);
 }
