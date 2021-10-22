@@ -26,7 +26,7 @@ main {
     padding: 100px 0;
 }
 .container {
-    max-width: 660px;
+    /* max-width: 660px; */
     background-color: rgb(125, 138, 133);
     display: flex;
     flex-wrap: wrap;
