@@ -8,18 +8,45 @@
 /* ---------------------- COMMON ----------------------*/
 body {
     font-family: 'Roboto';
-    height: 100vh;
+    /* height: 100vh; */
     background-color: rgb(88, 97, 94);
 }
+#root {
+    height: 100vh;
+}
+
+/* ---------------------- HEADER ----------------------*/
 header {
     height: 60px;
     width: 100%;
-    background-color: rgb(43, 49, 47);
+    padding: 10px 20px;
+    background-color: rgb(35, 43, 49);
 }
+.boxHeader {
+    height: 100%;
+    /* background-color: rgba(175, 132, 14, 0.555); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoBox {
+    height: 40px;
+    width: 40px;
+    /* background-color: rgba(175, 46, 14, 0.555); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.logoBox img {
+    height: 100%;
+}
+
+/* ---------------------- MAIN ----------------------*/
 main {
     height: calc(100% - 60px);
     /* height: calc(100vh - 60px); */
-    background-color: rgb(164, 206, 192);
+    background-color: rgb(44, 59, 68);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +54,7 @@ main {
 }
 .container {
     /* max-width: 660px; */
-    background-color: rgb(125, 138, 133);
+    /* background-color: rgb(125, 138, 133); */
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -35,7 +62,8 @@ main {
 .card {
     /* width: 200px; */
     /* height: 300px; */
-    background-color: rgb(65, 75, 87);
+    background-color: rgb(35, 43, 49);
+    color: white;
 }
 .boxSongImg {
     width: 100px;

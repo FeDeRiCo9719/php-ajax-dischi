@@ -17,25 +17,27 @@
     <title>Vue-dischi</title>
 </head>
 <body>
+    <div id="root">
 
-    <!-- HEADER -->
-    <?php include __DIR__ . '/../components/header.php'; ?>
+        <!-- HEADER -->
+        <?php include __DIR__ . '/../components/header.php'; ?>
 
-    <!-- MAIN -->
-    <main id="root">
-        <div class="container">
-            
-            <div class="card" v-for="(item,index) in albums" key="index">
-                <div class="boxSongImg">
-                    <img :src="item.poster" alt="">
+        <!-- MAIN -->
+        <main>
+            <div class="container">
+                
+                <div class="card" v-for="(item,index) in albums" key="index">
+                    <div class="boxSongImg">
+                        <img :src="item.poster" alt="">
+                    </div>
+                    <h3>{{item.title}}</h3>
+                    <h5>{{item.author}}</h5>
+                    <h5>{{item.year}}</h5>
                 </div>
-                <h3>{{item.title}}</h3>
-                <h5>{{item.author}}</h5>
-                <h5>{{item.year}}</h5>
+                
             </div>
-            
-        </div>
-    </main>
+        </main>
+    </div>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

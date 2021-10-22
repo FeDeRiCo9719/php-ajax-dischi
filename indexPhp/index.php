@@ -13,26 +13,27 @@ require __DIR__ . '/../database/data.php';
     <title>php-ajax-dischi</title>
 </head>
 <body>
-    <!-- HEADER -->
-    <?php include __DIR__ . '/../components/header.php'; ?>
+    <div id="root">
+        <!-- HEADER -->
+        <?php include __DIR__ . '/../components/header.php'; ?>
 
-    <!-- MAIN -->
-    <main>
-        <div class="container">
+        <!-- MAIN -->
+        <main>
+            <div class="container">
 
-            <?php foreach ( $database as $key => $data ) {  ?>
-                <div class="card">
-                    <div class="boxSongImg">
-                        <img src="<?php echo $data['poster'] ?>" alt="">
+                <?php foreach ( $database as $key => $data ) {  ?>
+                    <div class="card">
+                        <div class="boxSongImg">
+                            <img src="<?php echo $data['poster'] ?>" alt="">
+                        </div>
+                        <h3><?php echo $data['title'] ?></h3>
+                        <h5><?php echo $data['author'] ?></h5>
+                        <h5><?php echo $data['year'] ?></h5>
                     </div>
-                    <h3><?php echo $data['title'] ?></h3>
-                    <h5><?php echo $data['author'] ?></h5>
-                    <h5><?php echo $data['year'] ?></h5>
-                </div>
-            <?php } ?>
+                <?php } ?>
 
-        </div>
-    </main>
-    
+            </div>
+        </main>
+    </div>
 </body>
 </html>
