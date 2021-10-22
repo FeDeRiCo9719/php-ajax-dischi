@@ -25,13 +25,13 @@
     <main id="root">
         <div class="container">
             
-            <div class="card" v-for="(item,index) in array" key="index">
+            <div class="card" v-for="(item,index) in albums" key="index">
                 <div class="boxSongImg">
-                    <img src="" alt="">
+                    <img :src="item.poster" alt="">
                 </div>
-                <h3></h3>
-                <h5></h5>
-                <h5></h5>
+                <h3>{{item.title}}</h3>
+                <h5>{{item.author}}</h5>
+                <h5>{{item.year}}</h5>
             </div>
             
         </div>

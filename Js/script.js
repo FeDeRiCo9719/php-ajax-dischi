@@ -1,18 +1,15 @@
 var app = new Vue({
     el: '#root',
     data: {
-        array: [
-            'a',
-            'b',
-            'c',
-            'd',
-        ],
+        albums: [],
     },
     created() {
         axios.get('http://localhost/php-ajax-dischi/api/')
         .then( (response) => {
             // handle success
-            console.log(response.data[0]['author']);
+            // console.log(response.data[0]['author']);
+            this.albums = (response.data);
+            console.log(this.albums);
         })
         .catch( (error) => {
             // handle error
