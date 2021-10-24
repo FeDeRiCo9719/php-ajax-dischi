@@ -8,7 +8,7 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -20,19 +20,35 @@
     <div id="root">
 
         <!-- HEADER -->
-        <?php include __DIR__ . '/../components/header.php'; ?>
+        <header>
+            <div class="boxHeader">
+                <div class="logoBox">
+                    <img src="../img/spotify-logo.png" alt="imgLogo">
+                </div>
+                <div>
+                    <select v-model="genreSelected" name="genre" @change="selectGenre" id="">
+                        <option value="">All</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Pop">Pop</option>
+                        <option value="Jazz">Jazz</option>
+                        <option value="Metal">Metal</option>
+                    </select>
+                </div>
+            </div>
+        </header>
 
         <!-- MAIN -->
         <main>
             <div class="container">
                 
-                <div class="card" v-for="(item,index) in albums" key="index">
+                <div class="card" v-for="(item,index) in albums" :key="index">
                     <div class="boxSongImg">
                         <img :src="item.poster" alt="">
                     </div>
                     <h3>{{item.title}}</h3>
                     <h5>{{item.author}}</h5>
                     <h5>{{item.year}}</h5>
+                    <h5>{{item.genre}}</h5>
                 </div>
                 
             </div>
