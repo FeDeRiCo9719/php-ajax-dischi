@@ -56,19 +56,33 @@ main {
     /* max-width: 660px; */
     /* background-color: rgb(125, 138, 133); */
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
 }
 .card {
-    /* width: 200px; */
-    /* height: 300px; */
+    padding: 15px;
+    height: 260px;
+    width: 130px;
+
+    text-align: center;
     background-color: rgb(35, 43, 49);
     color: white;
 }
 .boxSongImg {
     width: 100px;
     height: 100px;
+    margin-bottom: 10px;
 }
 .boxSongImg img {
     width: 100%;
+}
+.infoAlbum {
+    color: grey;
+    font-size: 12px;
+}
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
 }

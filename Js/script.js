@@ -1,9 +1,6 @@
 var app = new Vue({
     el: '#root',
     data: {
-        arrayA : [0,1,2,3],
-        arrayB : [],
-
         fullAlbums: [],
         albums: [],
         albumsFiltered: [],
