@@ -80,7 +80,10 @@ main {
 }
 .infoAlbum {
     color: grey;
-    font-size: 12px;
+    font-size: 14px; 
+}
+.infoAlbum h5 {
+    margin-bottom: 5px;
 }
 .card h3 {
     font-size: 16px;
